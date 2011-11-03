@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /language/casyl
+# catalog-date 2008-10-26 18:17:50 +0100
+# catalog-license pd
+# catalog-version 2.0
 Name:		texlive-casyl
 Version:	2.0
 Release:	1
@@ -41,6 +47,7 @@ macros for its use within a document.
 %doc %{_texmfdistdir}/doc/latex/casyl/README
 %doc %{_texmfdistdir}/doc/latex/casyl/casyldoc.pdf
 %doc %{_texmfdistdir}/doc/latex/casyl/casyldoc.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,3 +58,5 @@ macros for its use within a document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
