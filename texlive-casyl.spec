@@ -48,3 +48,18 @@ macros for its use within a document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.0-2
++ Revision: 749979
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.0-1
++ Revision: 718011
+- texlive-casyl
+- texlive-casyl
+- texlive-casyl
+- texlive-casyl
+- texlive-casyl
+
