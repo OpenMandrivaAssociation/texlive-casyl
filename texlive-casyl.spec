@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /language/casyl
-# catalog-date 2008-10-26 18:17:50 +0100
-# catalog-license pd
-# catalog-version 2.0
 Name:		texlive-casyl
-Version:	2.0
-Release:	12
+Version:	15878
+Release:	1
 Summary:	Typeset Cree/Inuktitut in Canadian Aboriginal Syllabics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/casyl
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/casyl.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/casyl.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/casyl.r15878.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/casyl.doc.r15878.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ The bundle constitutes a font (as MetaFont source) and LaTeX
 macros for its use within a document.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -41,25 +35,10 @@ macros for its use within a document.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.0-2
-+ Revision: 749979
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.0-1
-+ Revision: 718011
-- texlive-casyl
-- texlive-casyl
-- texlive-casyl
-- texlive-casyl
-- texlive-casyl
-
