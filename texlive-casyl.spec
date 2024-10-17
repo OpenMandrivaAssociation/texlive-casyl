@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Typeset Cree/Inuktitut in Canadian Aboriginal Syllabics
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/casyl
+URL:		https://www.ctan.org/tex-archive/language/casyl
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/casyl.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/casyl.doc.r%{version}.tar.xz
